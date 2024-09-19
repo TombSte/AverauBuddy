@@ -1,0 +1,50 @@
+# .github/workflows/nuget-publish.yml
+
+name: Publish NuGet Package
+
+on:
+  push:
+    branches:
+      - main
+    tags:
+      - 'v*.*.*' # Trigger on tags like v1.0.0
+
+jobs:
+  build-and-publish:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Step 1: Checkout the repository
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      # Step 2: Setup .NET SDK
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: '6.0.x' # Specify the .NET version you are using
+
+      # Step 3: Restore dependencies
+      - name: Restore Dependencies
+        run: dotnet restore
+
+      # Step 4: Build the project
+      - name: Build
+        run: dotnet build --configuration Release --no-restore
+
+      # Step 5: Run Tests (Optional)
+      # Uncomment the following block if you have tests to run
+      # - name: Test
+      #   run: dotnet test --no-build --verbosity normal
+
+      # Step 6: Pack the NuGet package
+      - name: Pack
+        run: dotnet pack --configuration Release --no-build --output ./nupkg
+
+      # Step 7: Push the NuGet package
+      - name: Push NuGet Package
+        uses: nuget/actions@v1.0.5
+        with:
+          api-key: ${{ secrets.NUGET_API_KEY }}
+          packages-to-push: ./nupkg/*.nupkg
+          source: 'https://api.nuget.org/v3/index.json'

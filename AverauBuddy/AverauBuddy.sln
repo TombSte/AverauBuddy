@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AverauBuddy", "AverauBuddy\AverauBuddy.csproj", "{727D9B08-5DED-4E45-9DCA-8458448F2A7C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AverauBuddy.Test", "AverauBuddy.Test\AverauBuddy.Test.csproj", "{617434DD-2821-4309-BC17-E648E55FF05E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AverauBuddy.Example", "AverauBuddy.Example\AverauBuddy.Example.csproj", "{CE1BA65B-6083-4DB5-8504-4584CF4B199F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{727D9B08-5DED-4E45-9DCA-8458448F2A7C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{727D9B08-5DED-4E45-9DCA-8458448F2A7C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{727D9B08-5DED-4E45-9DCA-8458448F2A7C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{727D9B08-5DED-4E45-9DCA-8458448F2A7C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{617434DD-2821-4309-BC17-E648E55FF05E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{617434DD-2821-4309-BC17-E648E55FF05E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{617434DD-2821-4309-BC17-E648E55FF05E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{617434DD-2821-4309-BC17-E648E55FF05E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CE1BA65B-6083-4DB5-8504-4584CF4B199F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CE1BA65B-6083-4DB5-8504-4584CF4B199F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CE1BA65B-6083-4DB5-8504-4584CF4B199F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CE1BA65B-6083-4DB5-8504-4584CF4B199F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

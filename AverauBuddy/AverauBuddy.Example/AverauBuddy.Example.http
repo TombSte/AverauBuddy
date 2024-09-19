@@ -1,0 +1,6 @@
+@AverauBuddy.Example_HostAddress = http://localhost:5066
+
+GET {{AverauBuddy.Example_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

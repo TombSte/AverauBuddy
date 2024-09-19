@@ -2,7 +2,19 @@
 
     <PropertyGroup>
         <TargetFramework>netstandard2.0</TargetFramework>
+        <PackageId>AvearuBuddy</PackageId>
+        <Version>1.0.0</Version>
+        <Authors>TombSte</Authors>
+        <Description>A library for handling problem details according to the RFC 7807 specification.</Description>
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
+        <PackageProjectUrl>https://github.com/TombSte/AverauBuddy</PackageProjectUrl>
+        <RepositoryUrl>https://github.com/TombSte/AverauBuddy</RepositoryUrl>
+        <PackageTags>middleware;exception-handling;problem-details;ASP.NET Core</PackageTags>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <IncludeSymbols>true</IncludeSymbols>
+        <SymbolPackageFormat>snupkg</SymbolPackageFormat>
     </PropertyGroup>
+
 
     <ItemGroup>
       <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="2.2.0" />

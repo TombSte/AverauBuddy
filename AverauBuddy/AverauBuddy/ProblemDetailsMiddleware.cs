@@ -16,12 +16,10 @@ namespace AverauBuddy
             _next = next;
             _mapper = mapper;
 
-            // Configura le impostazioni di serializzazione Newtonsoft.Json
             _jsonSettings = new JsonSerializerSettings
             {
                 ContractResolver = new Newtonsoft.Json.Serialization.CamelCasePropertyNamesContractResolver(),
                 NullValueHandling = NullValueHandling.Ignore
-                // Aggiungi altre configurazioni se necessario
             };
         }
 
@@ -37,7 +35,6 @@ namespace AverauBuddy
                 context.Response.StatusCode = problemDetails.Status ?? StatusCodes.Status500InternalServerError;
                 context.Response.ContentType = "application/problem+json";
 
-                // Serializza l'oggetto CustomProblemDetails utilizzando Newtonsoft.Json
                 var json = JsonConvert.SerializeObject(problemDetails, _jsonSettings);
                 await context.Response.WriteAsync(json);
             }

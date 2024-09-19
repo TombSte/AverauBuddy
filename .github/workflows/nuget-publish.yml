@@ -23,7 +23,7 @@ jobs:
       - name: Setup .NET
         uses: actions/setup-dotnet@v3
         with:
-          dotnet-version: '6.0.x'
+          dotnet-version: '8.0.x' # Aggiornato a .NET 8.0.x
 
       - name: Restore Dependencies
         run: dotnet restore ./AverauBuddy/AverauBuddy/AverauBuddy.csproj
@@ -31,9 +31,9 @@ jobs:
       - name: Build
         run: dotnet build ./AverauBuddy/AverauBuddy/AverauBuddy.csproj --configuration Release --no-restore
 
-      # Optional: Run Tests
+      # Esegui i Test
       - name: Test
-        run: dotnet test ./AverauBuddy/AverauBuddy.Test/AverauBuddy.Test.csproj --no-build --verbosity normal
+        run: dotnet test ./AverauBuddy/AverauBuddy.Test/AverauBuddy.Test.csproj --no-build --configuration Release --verbosity normal
 
       - name: Pack
         run: dotnet pack ./AverauBuddy/AverauBuddy/AverauBuddy.csproj --configuration Release --no-build --output ./nupkg
